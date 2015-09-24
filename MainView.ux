@@ -4,12 +4,14 @@
 			var Observable = require("FuseJS/Observable");
 
 			var pictures = Observable();
+			var errorMessage = Observable();
 
 			fetch("http://jsonplaceholder.typicode.com/photos")
 				.then(function(result) {
 					if (result.status !== 200) {
 						// Bad response
 						debug_log("Something went wrong, status code: " + result.status);
+						errorMessage.value = "Oh noes! :(";
 						return;
 					}
 
@@ -29,14 +31,18 @@
 				}).catch(function(error) {
 					// Fatal JS error
 					debug_log("Fetch error " + error);
+					errorMessage.value = "Oh noes! :(";
 				});
 
 			module.exports = {
-				pictures: pictures
+				pictures: pictures,
+				errorMessage: errorMessage,
 			};
 		</JavaScript>
 
 		<StatusBarBackground DockPanel.Dock="Top" />
+
+		<Text TextColor="#a94442" Value="{errorMessage}" Alignment="Center" />
 
 		<ScrollView ClipToBounds="true">
 			<StackPanel>
