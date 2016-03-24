@@ -3,6 +3,7 @@
   "Packages": [
         "Fuse.Animations",
         "Fuse.BasicTheme",
+        "Fuse.Themes",
         "Fuse.Controls",
         "Fuse.Designer",
         "Fuse.Drawing",
@@ -15,6 +16,9 @@
         "Fuse.Shapes",
         "Fuse.Triggers",
         "Fuse.Reactive",
+        "Fuse.Android",
+        "Fuse.Desktop",
+        "Fuse.iOS",
         "FuseCore",
         "Uno.Collections",
         "Uno.Geometry"
