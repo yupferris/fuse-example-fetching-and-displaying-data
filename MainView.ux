@@ -1,4 +1,4 @@
-<App Theme="Basic" ClearColor="#eeeeeeff">
+<App>
 	<DockPanel>
 		<JavaScript>
 			var Observable = require("FuseJS/Observable");
